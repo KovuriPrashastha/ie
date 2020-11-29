@@ -6,9 +6,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import { Divider } from '@material-ui/core';
+import { ArrowRight } from '@material-ui/icons';
+
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   listSection: {
     backgroundColor: 'inherit',
+    fontColor: '#ffffff',
   },
   ul: {
     backgroundColor: 'inherit',
@@ -60,13 +62,10 @@ export default function Board() {
     setValue(newValue);
   };
   const l = [
-    'Placements 2020-2021 (batch graduating in 2021)',
+    'Placements 2020-2021 ',
     'NBA [Accreditation Status]',
     'Learning Management System',
-    'NIRF - 2020 ',
     'ARIIA Final Report',
-    'IQAC',
-    'RTI',
     'National Service Scheme[NSS]',
     'Student Online Fee Payment',
     'Turnitin Plagiarism Login',
@@ -74,8 +73,14 @@ export default function Board() {
     'Online Degree Verification',
   ];
   return (
-    <div style={{ display: 'flex', 'justify-content': 'space-evenly' }}>
-      <div>
+    <div
+      style={{
+        display: 'flex',
+        'justify-content': 'space-evenly',
+        padding: '50px',
+      }}
+    >
+      <div style={{ 'border-style': 'groove' }}>
         <AppBar position='static'>
           <Tabs
             value={value}
@@ -90,61 +95,101 @@ export default function Board() {
         <TabPanel value={value} index={0}>
           <h4>
             ADMISSION TO 1ST YEAR M.E./M.TECH. UNDER CATEGORY "B" SEATS FOR
+            <br />
             2020-2021
+            <Divider />
           </h4>
           <h4>
             TWO WEEK ONLINE STUDENT INDUCTION PROGRAM (25.11.2020 TO 6.12.2020)
-            : INSTRUCTIONS TO STUDENTS
+            <br />: INSTRUCTIONS TO STUDENTS
+            <Divider />
           </h4>
           <h4>
             TWO WEEK ONLINE STUDENT INDUCTION PROGRAM FOR B.E FIRST YEAR
+            <br />
             (ACADEMIC YEAR 2020-21) DAY-WISE SCHEDULE
+            <Divider />
           </h4>
           <h4>
             B.E. FIRST YEAR TWO WEEK STUDENT INDUCTION PROGRAM (SIP) 2020-2021 :
+            <br />
             DETAILS OF THE RESOURCE PERSONS
           </h4>
+          <Divider />
           <h4>SPOT ADMISSIONS: I YEAR B.E. TSEAMCET -2020 VACANCY POSITION</h4>
-          <h4>
-            ACADEMIC REGULATIONS (R-20) FOR B.E UNDER CHOICE BASED CREDIT SYSTEM
-            (CBCS)FOR THE STUDENTS ADMITTED W.E.F ACADEMIC YEAR 2020-2021
-            ONWARDS.
-          </h4>
+          <Divider />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <h4>M.E./M.TECH. (CBCS) II-SEMESTER MAIN EXAMINATIONS (OFFLINE)</h4>
           <h4>
-            M.E./M.TECH. (CBCS) II-SEMESTER MAIN EXAMINATIONS (OFFLINE),
-            DECEMBER-2020/JANUARY-2021
+            TWO WEEK ONLINE STUDENT INDUCTION PROGRAM (25.11.2020 TO 6.12.2020)
+            <br />: INSTRUCTIONS TO STUDENTS
           </h4>
+          <Divider />
           <h4>
-            BE (CBCS) II, IV AND VI SEMESTER MAIN EXAMINATIONS (OFFLINE)
-            DECEMBER-2020/JANUARY-2021
+            TWO WEEK ONLINE STUDENT INDUCTION PROGRAM FOR B.E FIRST YEAR
+            <br />
+            (ACADEMIC YEAR 2020-21) DAY-WISE SCHEDULE
           </h4>
-          <h4>B.E. IV SEMESTER SUPPLEMENTARY EXAMINATION TIME TABLE</h4>
-          <h4>B.E. IV SEMESTER SUPPLEMENTARY EXAMINATION TIME TABLE</h4>
+          <Divider />
+          <h4>
+            ADMISSION TO 1ST YEAR M.E./M.TECH. UNDER CATEGORY "B" SEATS FOR
+            <br />
+            2020-2021
+          </h4>
+          <Divider />
+
+          <h4>
+            B.E. FIRST YEAR TWO WEEK STUDENT INDUCTION PROGRAM (SIP) 2020-2021 :
+            <br />
+            DETAILS OF THE RESOURCE PERSONS
+          </h4>
+          <Divider />
+          <h4>SPOT ADMISSIONS: I YEAR B.E. TSEAMCET -2020 VACANCY POSITION</h4>
         </TabPanel>
         <TabPanel value={value} index={2}>
           <h4>
-            B.E I, II, III AND IV SEMESTER SUPPLEMENTARY PRACTICAL EXAM TIME
-            TABLE DECEMBER 2020.
+            ADMISSION TO 1ST YEAR M.E./M.TECH. UNDER CATEGORY "B" SEATS FOR
+            <br />
+            2020-2021
           </h4>
-          <h4>SPOT ADMISSIONS: I YEAR B.E. TSEAMCET -2020 VACANCY POSITION</h4>
-          <h4>SPOT ADMISSIONS: I YEAR B.E. TSEAMCET -2020</h4>
+          <Divider />
           <h4>
-            {' '}
-            SCHEDULE TO ISSUE TC, PC AND CGR BY ADMISSIONS AND EXAMINATIONS
-            BRANCH
+            TWO WEEK ONLINE STUDENT INDUCTION PROGRAM (25.11.2020 TO 6.12.2020)
+            <br />: INSTRUCTIONS TO STUDENTS
           </h4>
+          <Divider />
+
+          <h4>
+            B.E. FIRST YEAR TWO WEEK STUDENT INDUCTION PROGRAM (SIP) 2020-2021 :
+            <br />
+            DETAILS OF THE RESOURCE PERSONS
+          </h4>
+          <Divider />
+          <h4>SPOT ADMISSIONS: I YEAR B.E. TSEAMCET -2020 VACANCY POSITION</h4>
+          <h4>
+            TWO WEEK ONLINE STUDENT INDUCTION PROGRAM FOR B.E FIRST YEAR
+            <br />
+            (ACADEMIC YEAR 2020-21) DAY-WISE SCHEDULE
+          </h4>
+          <Divider />
         </TabPanel>
       </div>
       <div>
+        <h2>Important Links</h2>
         <List className={classes.root} subheader={<li />}>
           {l.map((sectionId) => (
             <li key={`section-${sectionId}`} className={classes.listSection}>
-              <ul className={classes.ul}>
-                <ListSubheader>{sectionId}</ListSubheader>
-              </ul>
+              <div style={{ display: 'flex' }}>
+                <div style={{ padding: '17px' }}>
+                  <ArrowRight />
+                </div>
+                <div>
+                  <ListSubheader style={{ color: '#00000' }}>
+                    <b>{sectionId}</b>
+                  </ListSubheader>
+                  <Divider />
+                </div>
+              </div>
             </li>
           ))}
         </List>

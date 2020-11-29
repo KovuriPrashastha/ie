@@ -3,7 +3,7 @@ import { Paper, TextField, Button } from '@material-ui/core';
 import logo from './images/vlogo.gif';
 export default function Top() {
   return (
-    <div>
+    <div style={{ 'background-color': '#f0f7f8' }}>
       <Paper
         square
         style={{ display: 'flex', 'justify-content': 'space-evenly' }}
@@ -18,6 +18,7 @@ export default function Top() {
           <h3>Student/Parent Login</h3>
           <TextField id='outlined-basic' label='LoginId' variant='outlined' />
           <TextField id='outlined-basic' label='Password' variant='outlined' />
+          <br />
           <Button variant='contained'>Login</Button>
         </div>
       </Paper>
